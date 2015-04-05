@@ -12,5 +12,10 @@
             "~/.zshrc": "zsh/zshrc",
             "~/.zpreztorc": "zsh/zpreztorc"
         }
+    },
+    {
+        "shell": [
+            ["vim +PluginInstall +qall", "Installing vim plugins"]
+        ]
     }
 ]
