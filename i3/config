@@ -5,13 +5,13 @@
 # set mod to alt key
 set $mod Mod1
 
-font pango:creep 16px
+font pango:Monaco for Powerline 9px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm -fa 'creep' 
+bindsym $mod+Return exec xterm -fa 'Monaco for Powerline:size=7'
 
 # kill focused window
 bindsym $mod+Shift+q kill
