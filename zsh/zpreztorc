@@ -1,0 +1,19 @@
+zstyle ':prezto:load' pmodule \
+	'environment' \
+	'terminal' \
+	'editor' \
+	'history' \
+	'directory' \
+	'spectrum' \
+	'utility' \
+	'ssh' \
+	'completion' \
+	'command-not-found' \
+	'fasd' \
+	'git' \
+	'node' \
+	'pacman' \
+	'prompt'
+
+zstyle ':prezto:module:pacman' frontend 'yaourt'
+zstyle ':prezto:module:prompt' theme 'minimal'

@@ -1,0 +1,16 @@
+[
+    {
+        "clean": ["~", "~/.i3"]
+    },
+    {
+        "link": {
+            "~/.vimrc": "editor/vimrc",
+            "~/.gitconfig": "git/gitconfig",
+            "~/.i3/config": "i3/config",
+            "~/.i3status.conf": "i3/i3status.conf",
+            "~/.Xresources": "X11/Xresources",
+            "~/.zshrc": "zsh/zshrc",
+            "~/.zpreztorc": "zsh/zpreztorc"
+        }
+    }
+]
