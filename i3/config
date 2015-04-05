@@ -5,13 +5,13 @@
 # set mod to alt key
 set $mod Mod1
 
-font pango:Monaco for Powerline 9px
+font pango:Source Code Pro Light 15px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm -fa 'Monaco for Powerline:size=7'
+bindsym $mod+Return exec i3-sensible-terminal -fa 'Source Code Pro Light:size=9' -xnllanguage 'en_US.UTF-8'
 
 # kill focused window
 bindsym $mod+Shift+q kill
