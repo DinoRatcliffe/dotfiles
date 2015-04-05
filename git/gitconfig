@@ -4,3 +4,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+[color]
+    ui=true
+[url "https://"]
+    insteadOf = git://
