@@ -3,3 +3,4 @@
 	email = yo@dino.io
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
