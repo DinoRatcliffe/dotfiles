@@ -126,18 +126,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-        status_command i3status
-	colors {
-		separator #444444
-		background #222222
-		statusline #666666
-		focused_workspace #d70a53 #d70a53 #ffffff
-		active_workspace #333333 #333333 #888888
-		inactive_workspace #333333 #333333 #888888
-		urgent_workspace #eb709b #eb709b #ffffff
-	}
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #colors
 client.focused #d70a53 #d70a53 #ffffff #8c0333

@@ -4,6 +4,8 @@
     },
     {
         "link": {
+            "~/.config/polybar/config": "polybar/config",
+            "~/.config/polybar/launch.sh": "polybar/launch.sh",
             "~/.vimrc": "editor/vimrc",
             "~/.gitconfig": "git/gitconfig",
             "~/.gitignore_global": "git/gitignore_global",
