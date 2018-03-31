@@ -1,8 +1,8 @@
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+
 # Vi style keybindings
 bindkey -v
 
 alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown"
 alias suspend="systemctl suspend"
-
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
