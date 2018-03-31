@@ -11,7 +11,7 @@ font pango:Source Code Pro Light 15px
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -fa 'Source Code Pro Light:size=9' -xnllanguage 'en_US.UTF-8'
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
