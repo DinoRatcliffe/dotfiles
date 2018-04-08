@@ -1338,7 +1338,8 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}',
                        'r': 'https://reddit.com/r/{}', 
                        'gbv': 'https://giantbomb.com/search/?i=videos&q={}', 
                        'gb': 'https://giantbomb.com/search/?q={}', 
-                       'a': 'https://wiki.archlinux.org/index.php?search={}'}
+                       'a': 'https://wiki.archlinux.org/index.php?search={}',
+                       'gh': 'https://github.com/search?q={}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
