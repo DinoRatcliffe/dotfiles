@@ -4,9 +4,10 @@
     },
     {
         "link": {
-            "~/.config/polybar/config": "polybar/config",
+            "~/.config/polybar": "polybar",
             "~/.config/ranger/rc.conf": "ranger/rc.conf",
-            "~/.config/polybar/launch.sh": "polybar/launch.sh",
+            "~/.config/rofi": "rofi",
+            "~/.config/qutebrowser": "qutebrowser",
             "~/.vimrc": "editor/vimrc",
             "~/.gitconfig": "git/gitconfig",
             "~/.gitignore_global": "git/gitignore_global",
