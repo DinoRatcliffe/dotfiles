@@ -5,6 +5,7 @@
     {
         "link": {
             "~/.config/polybar/config": "polybar/config",
+            "~/.config/ranger/rc.conf": "ranger/rc.conf",
             "~/.config/polybar/launch.sh": "polybar/launch.sh",
             "~/.vimrc": "editor/vimrc",
             "~/.gitconfig": "git/gitconfig",

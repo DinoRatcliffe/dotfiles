@@ -99,6 +99,10 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# Brightness controls
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -129,7 +133,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #colors
-client.focused #d70a53 #d70a53 #ffffff #8c0333
+client.focused #d70a53 #ff0000 #ffffff #8c0333
 client.focused_inactive #333333 #333333 #888888 #333333
 client.unfocused #333333 #333333 #888888 #333333
 client.urgent #eb709b #eb709b #ffffff #eb709b
