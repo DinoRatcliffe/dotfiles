@@ -19,6 +19,9 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run
 
+# direct application bindings
+bindsym $mod+b exec qutebrowser
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
