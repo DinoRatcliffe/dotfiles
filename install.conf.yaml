@@ -1,6 +1,6 @@
 [
     {
-        "clean": ["~", "~/.i3"]
+        "clean": ["~", "~/.i3", ".zrezto/modules/prompt/functions"]
     },
     {
         "link": {
@@ -8,7 +8,7 @@
             "~/.config/ranger/rc.conf": "ranger/rc.conf",
             "~/.config/rofi": "rofi",
             "~/.config/qutebrowser": "qutebrowser",
-            "~/.zprezto/modules/prompt/functions/prompt_red_minimal_setup": "zsh/zprezto/prompt_red_minimal_setup",
+            "~/.zprezto/modules/prompt/functions/prompt_dino_minimal_setup": "zsh/zprezto/prompt_dino_minimal_setup",
             "~/.vimrc": "editor/vimrc",
             "~/.gitconfig": "git/gitconfig",
             "~/.gitignore_global": "git/gitignore_global",

@@ -16,4 +16,4 @@ zstyle ':prezto:load' pmodule \
 	'prompt'
 
 zstyle ':prezto:module:pacman' frontend 'yaourt'
-zstyle ':prezto:module:prompt' theme 'red_minimal'
+zstyle ':prezto:module:prompt' theme 'dino_minimal'
