@@ -8,6 +8,7 @@
             "~/.config/ranger/rc.conf": "ranger/rc.conf",
             "~/.config/rofi": "rofi",
             "~/.config/qutebrowser": "qutebrowser",
+            "~/.zprezto/modules/prompt/functions/prompt_red_minimal_setup": "zsh/zprezto/prompt_red_minimal_setup",
             "~/.vimrc": "editor/vimrc",
             "~/.gitconfig": "git/gitconfig",
             "~/.gitignore_global": "git/gitignore_global",
@@ -15,7 +16,7 @@
             "~/.i3status.conf": "i3/i3status.conf",
             "~/.Xresources": "X11/Xresources",
             "~/.zshrc": "zsh/zshrc",
-            "~/.zpreztorc": "zsh/zpreztorc"
+            "~/.zpreztorc": "zsh/zprezto/zpreztorc"
         }
     },
     {
