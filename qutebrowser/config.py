@@ -1649,3 +1649,7 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}',
 # config.bind('<Return>', 'prompt-accept', mode='yesno')
 # config.bind('n', 'prompt-accept no', mode='yesno')
 # config.bind('y', 'prompt-accept yes', mode='yesno')
+
+## Scrolling fix
+config.bind('j', 'scroll-page 0 0.05')
+config.bind('k', 'scroll-page 0 -0.05')
