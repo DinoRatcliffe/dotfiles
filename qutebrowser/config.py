@@ -1336,6 +1336,7 @@ c.content.cookies.store = False
 ## Type: Dict
 c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 
                        'r': 'https://reddit.com/r/{}', 
+                       'y': 'https://youtube.com/results?search_query={}',
                        'gbv': 'https://giantbomb.com/search/?i=videos&q={}', 
                        'gb': 'https://giantbomb.com/search/?q={}', 
                        'a': 'https://wiki.archlinux.org/index.php?search={}',
