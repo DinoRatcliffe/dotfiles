@@ -6,3 +6,6 @@ bindkey -v
 alias reboot="systemctl reboot"
 alias shutdown="systemctl shutdown"
 alias suspend="systemctl suspend"
+
+alias v="vim"
+alias sv="sudo vim"

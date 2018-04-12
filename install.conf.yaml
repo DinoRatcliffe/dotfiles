@@ -5,6 +5,7 @@
     {
         "link": {
             "~/.config/polybar": "polybar",
+            "~/.config/tor": "tor",
             "~/.config/ranger/rc.conf": "ranger/rc.conf",
             "~/.config/rofi": "rofi",
             "~/.config/qutebrowser": "qutebrowser",

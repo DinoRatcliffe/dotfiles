@@ -113,6 +113,7 @@ bindsym XF86AudioLowerVolume exec amixer set Master 3%-
 
 # TOR controll
 bindcode 235 exec systemctl is-active tor --quiet && sudo systemctl stop tor || sudo systemctl start tor
+bindcode 179 exec sudo ~/.config/tor/tor-exits -n
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
