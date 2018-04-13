@@ -572,7 +572,7 @@ c.content.cookies.store = False
 ## QtWebEngine, writing the clipboard as response to a user interaction
 ## is always allowed.
 ## Type: Bool
-# c.content.javascript.can_access_clipboard = False
+c.content.javascript.can_access_clipboard = False
 
 ## Allow JavaScript to close tabs.
 ## Type: Bool
@@ -584,7 +584,9 @@ c.content.cookies.store = False
 
 ## Enable JavaScript.
 ## Type: Bool
-# c.content.javascript.enabled = True
+c.content.javascript.enabled = False
+config.set('content.javascript.enabled', True, '*://*.giantbomb.com/*')
+config.set('content.javascript.enabled', True, '*://*.formula1.com/*')
 
 ## Log levels to use for JavaScript console logging messages. When a
 ## JavaScript message with the level given in the dictionary key is
