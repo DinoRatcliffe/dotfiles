@@ -21,7 +21,7 @@ alias kl="kubectl logs"
 alias kp="kubectl get pods -a -o wide | GREP_COLOR='01;33' egrep -i --color=always '^.*Running|$' | GREP_COLOR='01;32' egrep -i --color=always '^.*Completed|$' | GREP_COLOR='05;31' egrep -i --color=always '^.*Error|$' | GREP_COLOR='05;32' egrep -i --color=always '^.*ContainerCreating|$'"
 
 # kp watch (hack to get it working with the watch command)
-alias kpw="\"kubectl get pods -a -o wide | GREP_COLOR='01;32' egrep -i --color=always '^*Running|$' | GREP_COLOR='01;33' egrep -i --color=always 'Pending|$' | GREP_COLOR='05;31' egrep -i --color=always 'Error|$' | GREP_COLOR='05;32' egrep -i --color=always 'ContainerCreating|$'\""
+alias kpw="\"kubectl get pods -a -o wide | GREP_COLOR='01;33' egrep -i --color=always '^.*Running|$' | GREP_COLOR='01;32' egrep -i --color=always '^.*Completed|$' | GREP_COLOR='05;31' egrep -i --color=always '^.*Error|$' | GREP_COLOR='05;32' egrep -i --color=always '^.*ContainerCreating|$'\""
 alias kn="kubectl get nodes"
 
 # Jinja2 templates
