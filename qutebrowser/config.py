@@ -11,6 +11,7 @@
 ## aliases, while the values are the commands they map to.
 ## Type: Dict
 # c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
+c.aliases = {'jse': 'set content.javascript.enabled true', 'jsd': 'set content.javascript.enabled false'}
 
 ## Time interval (in milliseconds) between auto-saves of
 ## config/cookies/etc.

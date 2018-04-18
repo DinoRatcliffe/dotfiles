@@ -55,7 +55,14 @@ autocmd FileType python inoremap ;iei if :<Enter><TODO><Enter><C-d>elif <TODO>:<
 autocmd FileType python inoremap ;api from argparse import ArgumentParser
 autocmd FileType python inoremap ;ap arg_parser = ArgumentParser(description='')<Enter><TODO><ESC>k0f'a
 autocmd FileType python inoremap ;apa arg_parser.add_argument('', type=<TODO>, default=<TODO>,<Enter>help='<TODO>')<Enter><TODO><Esc>2k0f'a
-autocmd FileType python inoremap :app args = arg_parser.parse_args()<Enter>
+autocmd FileType python inoremap ;app args = arg_parser.parse_args()<Enter>
+
+" python - jinja2
+autocmd BufNewFile,BufRead *.jinja2 set filetype=jinja2
+autocmd BufNewFile,BufRead *.jinja2 set syntax=yaml
+autocmd FileType jinja2 inoremap ;s {%- set =<TODO> %}<Enter><TODO><ESC>k0f=i
+autocmd FileType jinja2 inoremap ;f {%- for in <TODO>%}<Enter><TODO><Enter>{%- endfor %}<ESC>2k0fra
+autocmd FileType jinja2 inoremap ;p {{}}<TODO><ESC>2F}i
 
 " python - sonnet
 

@@ -2,10 +2,37 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Vi style keybindings
 bindkey -v
+export EDITOR=vim
 
-alias reboot="systemctl reboot"
-alias shutdown="systemctl shutdown"
-alias suspend="systemctl suspend"
-
+# Vim aliases
 alias v="vim"
 alias sv="sudo vim"
+
+# Kubernetes aliases
+alias k="kubectl"
+alias gk="cd /mnt/k8s-data" # this is my nfs location for each k8s node
+
+alias kc="kubectl create"
+alias kcf="kubectl create -f"
+alias kd="kubectl delete"
+alias kdf="kubectl delete -f"
+
+alias kl="kubectl logs"
+alias kp="kubectl get pods | GREP_COLOR='01;32' egrep -i --color=always 'Running|$' | GREP_COLOR='01;33' egrep -i --color=always 'Pending|$' | GREP_COLOR='05;31' egrep -i --color=always 'Error|$'"
+
+# kp watch (hack to get it working with the watch command)
+alias kpw="\"kubectl get pods | GREP_COLOR='01;32' egrep -i --color=always 'Running|$' | GREP_COLOR='01;33' egrep -i --color=always 'Pending|$' | GREP_COLOR='05;31' egrep -i --color=always 'Error|$'\""
+alias kn="kubectl get nodes"
+
+# Jinja2 templates
+alias jr="python3 -c 'import sys; from jinja2 import Template; print(Template(sys.stdin.read()).render())'" # jinja2 render: cat template | jr > file.yaml
+
+# Docker aliases
+alias db="docker build"
+alias dbf="docker build . -f"
+alias dp="docker push"
+
+# Watch aliases
+alias w1="watch -n 1 -c "
+alias w5="watch -n 5 -c "
+alias w10="watch -n 10 -c "
