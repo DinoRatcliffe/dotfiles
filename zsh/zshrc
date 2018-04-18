@@ -36,3 +36,7 @@ alias dp="docker push"
 alias w1="watch -n 1 -c "
 alias w5="watch -n 5 -c "
 alias w10="watch -n 10 -c "
+
+# GPG aliases
+alias gpg=gpg2
+compdef gpg2=gpg
