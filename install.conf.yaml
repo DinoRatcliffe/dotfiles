@@ -4,6 +4,7 @@
     },
     {
         "link": {
+            "~/.unison/dino.prf": "unison/dino.prf",
             "~/.config/polybar": "polybar",
             "~/.config/tor": "tor",
             "~/.config/ranger/rc.conf": "ranger/rc.conf",
