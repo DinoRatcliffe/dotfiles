@@ -10,7 +10,8 @@ alias sv="sudo vim"
 
 # Kubernetes aliases
 alias k="kubectl"
-alias gk="cd /mnt/k8s-data" # this is my nfs location for each k8s node
+alias gk="cd /mnt/k8s-data" # this is fast nfs location for each k8s node
+alias gs="cd /mnt/storage-ssd" # this is storage nfs location for each k8s node
 
 alias kc="kubectl create"
 alias kcf="kubectl create -f"

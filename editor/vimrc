@@ -20,7 +20,16 @@ filetype plugin indent on    " required
 
 " editor settings
 syntax on
-set number
+
+set number relativenumber
+highlight LineNr ctermfg=240
+highlight CursorLineNr ctermfg=red
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave    * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter      * set norelativenumber
+augroup END
+
 set hlsearch
 set smartindent
 set tabstop=4
