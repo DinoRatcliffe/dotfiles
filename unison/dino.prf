@@ -1,0 +1,8 @@
+root=/home/dino
+root=ssh://enterprise///home/dino/unison
+sshargs=-p 31415
+
+ignore=Name .*
+ignore=Path local
+ignore=Path Development/public/dotfiles
+ignore=Path Downloads
