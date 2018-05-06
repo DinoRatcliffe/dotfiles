@@ -28,6 +28,13 @@ alias kn="kubectl get nodes"
 # Jinja2 templates
 alias jr="python3 -c 'import sys; from jinja2 import Template; print(Template(sys.stdin.read()).render())'" # jinja2 render: cat template | jr > file.yaml
 
+# git aliases
+alias gs="git status "
+alias ga="git add "
+alias gd="git diff "
+alias gc="git commit "
+alias gp="git push "
+
 # Docker aliases
 alias db="docker build"
 alias dbf="docker build . -f"

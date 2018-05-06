@@ -39,6 +39,9 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd Filetype java setlocal omnifunc=javacomplete#cComplete
 let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
+set path+=**
+set wildmenu
+
 " code 
 
 map <F6> :setlocal spell! spelllang=en_gb<CR>
