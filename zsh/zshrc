@@ -4,15 +4,31 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 bindkey -v
 export EDITOR=vim
 
+# misc aliases
+
+# todo aliases
+alias t="todolist "
+alias ti="todolist init "
+alias ta="todolist add "
+alias tc="todolist complete "
+alias ta="todolist ac "
+alias tl="todolist list "
+alias td="todolist delete "
+alias tlp="todolist list by project "
+alias tla="todolist list agenda "
+alias tlar="todolist list archived "
+alias tlo="todolist list overdue "
+alias tlc="todolist list completed "
+
 # Vim aliases
 alias v="vim"
 alias sv="sudo vim"
 
 # Kubernetes aliases
-alias k="kubectl"
 alias gk="cd /mnt/k8s-data" # this is fast nfs location for each k8s node
 alias gs="cd /mnt/storage-ssd" # this is storage nfs location for each k8s node
 
+alias k="kubectl"
 alias kc="kubectl create"
 alias kcf="kubectl create -f"
 alias kd="kubectl delete"
@@ -29,6 +45,7 @@ alias kn="kubectl get nodes"
 alias jr="python3 -c 'import sys; from jinja2 import Template; print(Template(sys.stdin.read()).render())'" # jinja2 render: cat template | jr > file.yaml
 
 # git aliases
+alias g="git "
 alias gs="git status "
 alias ga="git add "
 alias gd="git diff "
@@ -36,11 +53,13 @@ alias gc="git commit "
 alias gp="git push "
 
 # Docker aliases
+alias d="docker "
 alias db="docker build"
 alias dbf="docker build . -f"
 alias dp="docker push"
 
 # Watch aliases
+alias w="watch "
 alias w1="watch -n 1 -c "
 alias w5="watch -n 5 -c "
 alias w10="watch -n 10 -c "
