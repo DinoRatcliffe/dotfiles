@@ -5,13 +5,14 @@ bindkey -v
 export EDITOR=vim
 
 # misc aliases
+alias title="printf '\033];%s\07\n' "
 
 # todo aliases
 alias t="todolist "
 alias ti="todolist init "
 alias ta="todolist add "
 alias tc="todolist complete "
-alias ta="todolist ac "
+alias tac="todolist ac "
 alias tl="todolist list "
 alias td="todolist delete "
 alias tlp="todolist list by project "
@@ -23,6 +24,13 @@ alias tlc="todolist list completed "
 # Vim aliases
 alias v="vim"
 alias sv="sudo vim"
+
+# Project aliases
+alias ck="cd ~/Development/kit"
+
+# Python aliases
+alias p="python "
+alias pdb="python -m pdb "
 
 # Kubernetes aliases
 alias gk="cd /mnt/k8s-data" # this is fast nfs location for each k8s node
@@ -51,6 +59,9 @@ alias ga="git add "
 alias gd="git diff "
 alias gc="git commit "
 alias gp="git push "
+alias gb="git branch "
+alias grm="git rm "
+alias gch="git checkout "
 
 # Docker aliases
 alias d="docker "

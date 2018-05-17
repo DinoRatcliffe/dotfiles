@@ -46,26 +46,31 @@ set wildmenu
 
 map <F6> :setlocal spell! spelllang=en_gb<CR>
 
-inoremap <Space><Space> <Esc>/<TODO><Enter>"_c6l
+inoremap <Space><Space> <Esc>/<TODO><CR>"_c6l
+inoremap ;td TODO (dr@dino.ai): 
 
 " html
 autocmd FileType html inoremap ;i i<em></em><Space><TODO><ESC>FeT>i
 
 " python
-autocmd FileType python inoremap ;c class (<TODO>):<Enter>"""<Enter><TODO><Enter>"""<Enter><TODO><Enter>return <TODO><Esc>5k0f(i
-autocmd FileType python inoremap ;w with :<Enter><TODO><Esc>k0f:i
-autocmd FileType python inoremap ;wa with as <TODO>:<Enter><TODO><Esc>k0fha<Space>
-autocmd FileType python inoremap ;m if __name__ == '__main__':<Enter><Tab>
-autocmd FileType python inoremap ;d def (<TODO>):<Enter>"""<Enter><TODO><Enter>"""<Enter><TODO><Enter>return <TODO><Esc>5k0f(i
-autocmd FileType python inoremap ;f for in <TODO>:<Enter><TODO><Esc>k0fra<Space>
+autocmd FileType python inoremap ;c class (<TODO>):<CR>"""<CR><TODO><CR>"""<CR>def __init__(self<TODO>):<CR><TODO><Esc>5k0f(i
+autocmd FileType python inoremap ;ac from abc import ABCMeta, abstractmethod, abstractproperty<CR><CR>class (<TODO>):<CR>"""<CR><TODO><CR>"""<CR>def __init__(self<TODO>):<CR><TODO><Esc>5k0f(i
+autocmd FileType python inoremap ;w with :<CR><TODO><Esc>k0f:i
+autocmd FileType python inoremap ;wa with as <TODO>:<CR><TODO><Esc>k0fha<Space>
+autocmd FileType python inoremap ;m if __name__ == '__main__':<CR><Tab>
+autocmd FileType python inoremap ;d def (<TODO>):<CR>"""<CR><TODO><CR>"""<CR><TODO><CR>return <TODO><Esc>5k0f(i
+autocmd FileType python inoremap ;f for in <TODO>:<CR><TODO><Esc>k0fra<Space>
+autocmd FileType python inoremap ;p @property<CR>def (self<TODO>):<CR>"""<CR><TODO><CR>"""<CR><TODO><Esc>4k0f(i
+autocmd FileType python inoremap ;ap @abstractproperty<CR>def (self<TODO>):<CR>"""<CR><TODO><CR>"""<CR>raise NotImplementedError()<Esc>4k0f(i
+autocmd FileType python inoremap ;am @abstractmethod<CR>def (self<TODO>):<CR>"""<CR><TODO><CR>"""<CR>raise NotImplementedError()<Esc>4k0f(i
 
-autocmd FileType python inoremap ;i if :<Enter><TODO><Esc>k0f:i
-autocmd FileType python inoremap ;ie if :<Enter><TODO><Enter><C-d>else:<Enter><TODO><Esc>3k0f:i
-autocmd FileType python inoremap ;iei if :<Enter><TODO><Enter><C-d>elif <TODO>:<Enter><TODO><Esc>3k0f:i
+autocmd FileType python inoremap ;i if :<CR><TODO><Esc>k0f:i
+autocmd FileType python inoremap ;ie if :<CR><TODO><CR><C-d>else:<CR><TODO><Esc>3k0f:i
+autocmd FileType python inoremap ;iei if :<CR><TODO><Enter><C-d>elif <TODO>:<Enter><TODO><Esc>3k0f:i
 
 " python - argparse
 autocmd FileType python inoremap ;api from argparse import ArgumentParser
-autocmd FileType python inoremap ;ap arg_parser = ArgumentParser(description='')<Enter><TODO><ESC>k0f'a
+autocmd FileType python inoremap ;apo arg_parser = ArgumentParser(description='')<Enter><TODO><ESC>k0f'a
 autocmd FileType python inoremap ;apa arg_parser.add_argument('', type=<TODO>, default=<TODO>,<Enter>help='<TODO>')<Enter><TODO><Esc>2k0f'a
 autocmd FileType python inoremap ;app args = arg_parser.parse_args()<Enter>
 
@@ -77,6 +82,8 @@ autocmd FileType jinja2 inoremap ;f {%- for in <TODO>%}<Enter><TODO><Enter>{%- e
 autocmd FileType jinja2 inoremap ;p {{}}<TODO><ESC>2F}i
 
 " python - sonnet
+autocmd FileType python inoremap ;sm class (snt.AbstractModule):<CR>"""<CR><TODO><CR>"""<CR>def __init__(self, name<TODO>):<CR>"""<CR><TODO><CR>"""<CR>super(<TODO>, self).__init__(name=name)<CR><CR><C-d>def _build(self, inputs<TODO>):<CR>"""<CR><TODO><CR>"""<CR><TODO><Esc>14k0f(i
+autocmd FileType python inoremap ;sl snt.Linear(output_size=, name=<TODO>)<Esc>2F=a
 
 " encypted files
 " Don't save backups of *.gpg files

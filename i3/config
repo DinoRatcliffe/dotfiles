@@ -158,3 +158,4 @@ client.urgent #eb709b #eb709b #ffffff #eb709b
 
 #remove title bar for windows
 new_window 1pixel
+for_window [class=".*"] title_format "<span foreground='white' size='x-small' font_weight='bold'> %title</span>"
