@@ -4,6 +4,8 @@
     },
     {
         "link": {
+            "~/.xinitrc":"X11/xinitrc",
+            "~/.Xmodmap":"X11/Xmodmap",
             "~/.unison/dino.prf": "unison/dino.prf",
             "~/.config/polybar": "polybar",
             "~/.config/tor": "tor",
