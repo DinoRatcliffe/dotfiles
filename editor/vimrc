@@ -21,9 +21,16 @@ filetype plugin indent on    " required
 " editor settings
 syntax on
 
+execute "set colorcolumn=" . join(range(91,335), ',')
+
+colorscheme default
 set number relativenumber
 highlight LineNr ctermfg=240
 highlight CursorLineNr ctermfg=red
+highlight Comment ctermfg=red
+highlight ColorColumn ctermbg=0
+
+
 augroup numbertoggle
     autocmd!
     autocmd BufEnter,FocusGained,InsertLeave    * set relativenumber
@@ -37,8 +44,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd Filetype java setlocal omnifunc=javacomplete#cComplete
-let g:SuperTabDefaultCompletionType = "\<c-x>\<c-o>"
 
 set path+=**
 set wildignore+=*.pyc
@@ -76,7 +81,7 @@ autocmd FileType python inoremap ;apo arg_parser = ArgumentParser(description=''
 autocmd FileType python inoremap ;apa arg_parser.add_argument('', type=<TODO>, default=<TODO>,<Enter>help='<TODO>')<Enter><TODO><Esc>2k0f'a
 autocmd FileType python inoremap ;app args = arg_parser.parse_args()<Enter>
 
-autocmd FileType python inoremap ;h """""""""""""""""""""""""""""""""""""""<CR><Esc>k:read ~/.asci-logo<CR>7jo<CR>"""""""""""""""""""""""""""""""""""""""<CR>
+autocmd FileType python inoremap ;h <CR><Esc>k:read ~/.asci-logo<CR>kdd11ji
 
 " python - jinja2
 autocmd BufNewFile,BufRead *.jinja2 set filetype=jinja2
@@ -144,3 +149,4 @@ let g:netrw_banner=0
 let g:netrw_altv=1 " open splits to the right
 
 nnoremap  <leader>e :Explore<CR>
+
