@@ -15,6 +15,7 @@
             "~/.kube/set-config.sh": "kube/set-config.sh",
             "~/.zprezto/modules/prompt/functions/prompt_dino_minimal_setup": "zsh/zprezto/prompt_dino_minimal_setup",
             "~/.vimrc": "editor/vimrc",
+            "~/.asci-logo": "editor/asci-logo",
             "~/.gitconfig": "git/gitconfig",
             "~/.gitignore_global": "git/gitignore_global",
             "~/.i3/config": "i3/config",
