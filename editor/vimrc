@@ -11,8 +11,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Plugin 'bling/vim-bufferline'
-Plugin 'suan/vim-instant-markdown'
 Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,6 +44,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+set winheight=30
+set winminheight=5
 
 set path+=**
 set wildignore+=*.pyc
