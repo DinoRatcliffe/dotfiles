@@ -11,8 +11,9 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugins
 Plugin 'bling/vim-bufferline'
-Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

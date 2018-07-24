@@ -10,6 +10,9 @@ font pango:Source Code Pro Light 15px
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# testing stuff
+for_window [title="^Environment$"] floating enable, sticky enable, border none, move absolute position 1px 30px
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -102,6 +105,11 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+# Music control
+bindcode $mod+118 exec mpc next
+bindcode $mod+115 exec mpc prev
+bindcode $mod+110 exec mpc toggle
 
 # Brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5

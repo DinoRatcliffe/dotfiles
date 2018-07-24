@@ -46,7 +46,7 @@ font-0 = xos4 Terminus:style=Bold:size=14
 
 modules-left = i3
 modules-center = 
-modules-right = torup wifiup wlan cpu temperature memory battery date
+modules-right = mpd torup wifiup wlan cpu temperature memory battery date
 
 tray-position = right
 tray-padding = 0
@@ -162,15 +162,24 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+label-song = %artist% - %title%
+format-online = MPD: %{F#0f0}<label-song>%{F-}
+format-paused = MPD: %{F#f00}<label-song>%{F-}
+format-stopped = MPD:%{F#f00}Stopped%{F-}
+format-offline = MPD:%{F#f00}Offline%{F-}
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+bar-progress-width=45
+bar-progress-indicator=#
+bar-progress-fill=#
+bar-progress-empty=-
 
-label-song-maxlen = 25
+icon-prev = PREV
+icon-stop = STOP
+icon-play = PLAY
+icon-pause = PAUSE
+icon-next = NEXT
+
+label-song-maxlen = 200
 label-song-ellipsis = true
 
 [module/xbacklight]

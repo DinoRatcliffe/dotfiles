@@ -590,6 +590,7 @@ c.content.javascript.can_access_clipboard = False
 c.content.javascript.enabled = False
 config.set('content.javascript.enabled', True, '*://*.giantbomb.com/*')
 config.set('content.javascript.enabled', True, '*://*.formula1.com/*')
+config.set('content.javascript.enabled', True, '*://*.localhost/*')
 
 ## Log levels to use for JavaScript console logging messages. When a
 ## JavaScript message with the level given in the dictionary key is
@@ -1544,6 +1545,8 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}',
 # config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
+config.bind('m', 'spawn mpv {url}')
+config.bind('M', 'hint links spawn mpv {hint-url}')
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')
