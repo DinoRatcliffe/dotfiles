@@ -11,7 +11,7 @@ font pango:Source Code Pro Light 15px
 floating_modifier $mod
 
 # testing stuff
-for_window [title="^Environment$"] floating enable, sticky enable, border none, move absolute position 1px 30px
+for_window [title="^Environment$"] floating enable, sticky enable, border none, move absolute position 2315px 1180px
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
