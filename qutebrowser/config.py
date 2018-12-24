@@ -1343,6 +1343,7 @@ c.hints.border = '1px solid #FF0000'
 c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 
                        'r': 'https://reddit.com/r/{}', 
                        'y': 'https://youtube.com/results?search_query={}',
+                       's': 'https://scholar.google.co.uk/scholar?q={}',
                        'gbv': 'https://giantbomb.com/search/?i=videos&q={}', 
                        'gb': 'https://giantbomb.com/search/?q={}', 
                        'a': 'https://wiki.archlinux.org/index.php?search={}',
@@ -1658,6 +1659,9 @@ config.bind('M', 'hint links spawn mpv {hint-url}')
 # config.bind('<Return>', 'prompt-accept', mode='yesno')
 # config.bind('n', 'prompt-accept no', mode='yesno')
 # config.bind('y', 'prompt-accept yes', mode='yesno')
+
+## Dark css
+config.bind('<Ctrl-R>', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/Dark.css ""')
 
 ## Scrolling fix
 config.bind('j', 'scroll-page 0 0.05')
