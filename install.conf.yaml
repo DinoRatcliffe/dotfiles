@@ -8,6 +8,7 @@
             "~/.Xmodmap":"X11/Xmodmap",
             "~/.unison/dino.prf": "unison/dino.prf",
             "~/.config/polybar": "polybar",
+            "~/.config/mpd": "mpd",
             "~/.config/tor": "tor",
             "~/.config/ranger/rc.conf": "ranger/rc.conf",
             "~/.config/rofi": "rofi",

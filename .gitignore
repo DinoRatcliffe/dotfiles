@@ -1,1 +1,6 @@
 qutebrowser/autoconfig.yml
+
+mpd/database
+mpd/pid
+mpd/log
+mpd/state
