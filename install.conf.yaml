@@ -9,6 +9,7 @@
             "~/.unison/dino.prf": "unison/dino.prf",
             "~/.config/polybar": "polybar",
             "~/.config/mpd": "mpd",
+            "~/.ncmpcpp": "ncmpcpp",
             "~/.config/tor": "tor",
             "~/.config/ranger/rc.conf": "ranger/rc.conf",
             "~/.config/rofi": "rofi",
