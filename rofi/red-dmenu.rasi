@@ -31,7 +31,7 @@ configuration {
 }
 
 #element {
-    padding: 5px 5px;
+    padding: 3px 5px;
 }
 #element selected {
     background-color: Red;

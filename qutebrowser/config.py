@@ -591,6 +591,7 @@ c.content.javascript.enabled = False
 config.set('content.javascript.enabled', True, '*://*.giantbomb.com/*')
 config.set('content.javascript.enabled', True, '*://*.formula1.com/*')
 config.set('content.javascript.enabled', True, '*://*.localhost/*')
+config.set('content.javascript.enabled', True, '*://*.youtube.com/*')
 
 ## Log levels to use for JavaScript console logging messages. When a
 ## JavaScript message with the level given in the dictionary key is
