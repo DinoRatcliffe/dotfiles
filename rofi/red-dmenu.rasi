@@ -3,13 +3,6 @@
  * User: Qball
  * Copyright: Dave Davenport
  */
-* {
-    background-color:      Black;
-    border-color:          White;
-    text-color:           White;
-    font:            "xos4 Terminus 14";
-}
-
 configuration {
 }
 
@@ -42,4 +35,11 @@ configuration {
 }
 #element selected {
     background-color: Red;
+}
+
+* {
+    background-color:      Black;
+    border-color:          White;
+    text-color:           White;
+    font:            "xos4 Terminus 14";
 }
