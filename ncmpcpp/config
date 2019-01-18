@@ -83,6 +83,7 @@ visualizer_sync_interval = 30
 visualizer_type = spectrum
 #visualizer_look = "▋▋"
 visualizer_look = +|
+visualizer_color = white
 #visualizer_color = 255, 252, 249, 246, 240
 #visualizer_look = +/
 #
@@ -398,7 +399,7 @@ media_library_primary_tag = album_artist
 ##
 ## Note: You can define startup screen by choosing screen from the list above.
 ##
-#startup_screen = playlist
+startup_screen = media_library
 #
 ##
 ## Note: You can define startup slave screen by choosing screen from the list
@@ -513,7 +514,8 @@ media_library_primary_tag = album_artist
 ## are used there is a possibility that you'll be able to use only colors with
 ## transparent background.
 #
-#colors_enabled = yes
+colors_enabled = yes
+main_window_highlight_color = red
 #
 #empty_tag_color = cyan
 #
@@ -525,11 +527,11 @@ media_library_primary_tag = album_artist
 #
 #state_flags_color = default:b
 #
-#main_window_color = yellow
+main_window_color = white
 #
 #color1 = white
 #
-#color2 = green
+#color2 = black
 #
 #progressbar_color = black:b
 #
@@ -543,7 +545,7 @@ media_library_primary_tag = album_artist
 #
 #alternative_ui_separator_color = black:b
 #
-#window_border_color = green
+#window_border_color = red
 #
 #active_window_border = red
 #
