@@ -23,6 +23,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 bindsym $mod+p exec passmenu 
 
+bindsym $mod+c exec /home/dino/.scripts/select-wifi.sh
+
 # direct application bindings
 bindsym $mod+space exec qutebrowser
 
