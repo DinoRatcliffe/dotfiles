@@ -17,4 +17,4 @@ done
 
 rm -rf outfile
 /home/dino/.scripts/timer.sh -h $hour -m $min -s $sec -n "$name" | /home/dino/.scripts/save-last-line.sh $outfile
-echo "Task Timer: Done" > $outfile
+echo "Task Timer: None" > $outfile

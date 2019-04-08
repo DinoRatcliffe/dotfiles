@@ -46,7 +46,7 @@ font-0 = xos4 Terminus:style=Bold:size=14
 
 modules-left = i3
 modules-center = 
-modules-right = mpd cluster-running cluster-completed cluster-error torup wifiup wlan cpu temperature memory battery date
+modules-right = task-timer mpd cluster-running cluster-completed cluster-error torup wifiup wlan cpu temperature memory battery date
 
 tray-position = right
 tray-padding = 0
@@ -73,6 +73,14 @@ exec = (sudo systemctl is-active tor --quiet && sudo systemctl is-active iptable
 label= %output%
 interval = 5
 label-padding=2
+
+[module/task-timer]
+type = custom/script
+exec = less /tmp/polybar-task.txt
+label = %output%
+interval = 1
+label-padding-left = 2
+label-padding-right = 2
 
 [module/cluster-running]
 type = custom/script
