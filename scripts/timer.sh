@@ -21,13 +21,14 @@ while [ $hour -ge 0 ]; do
                         if [ ! -z ${name// } ]; then
                             echo -ne "${name}: "
                         fi
+                        echo -ne "%{F#0f0}"
                         if [ $hour -ne 0 ]; then
                             echo -ne "${hour}h "
                         fi
                         if [ $min -ne 0 ]; then
                             echo -ne "${min}m "
                         fi
-                        echo -ne "${sec}s\n"
+                        echo -ne "${sec}s%{F-}\n"
                         let "sec=sec-1"
                         sleep 1
                 done
