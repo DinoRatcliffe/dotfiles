@@ -17,7 +17,7 @@ done
 while [ $hour -ge 0 ]; do
         while [ $min -ge 0 ]; do
                 while [ $sec -ge 0 ]; do
-                        echo -ne "\033[2K"
+#                        echo -ne "\033[2K"
                         if [ ! -z ${name// } ]; then
                             echo -ne "${name}: "
                         fi
@@ -27,7 +27,7 @@ while [ $hour -ge 0 ]; do
                         if [ $min -ne 0 ]; then
                             echo -ne "${min}m "
                         fi
-                        echo -ne "${sec}s\r"
+                        echo -ne "${sec}s\n"
                         let "sec=sec-1"
                         sleep 1
                 done
