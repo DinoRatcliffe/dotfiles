@@ -16,5 +16,5 @@ while getopts 'h:vm:vs:vn:v' flag; do
 done
 
 rm -rf outfile
-/home/dino/.scripts/timer.sh -h $hour -m $min -s $sec -n "$name" | /home/dino/.scripts/save-last-line.sh $outfile
+~/.scripts/timer.sh -h $hour -m $min -s $sec -n "$name" | ~/.scripts/save-last-line.sh $outfile
 echo "Task Timer: %{F#f00}None%{F-}" > $outfile
