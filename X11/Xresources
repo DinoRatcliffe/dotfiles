@@ -27,5 +27,5 @@
 *color7:     #dddddd
 *color15:    #dddddd
 
-URxvt*font: xft:xos4 Terminus:size=14
+URxvt*font: xft:xos4 Terminus:size=10
 URxvt*scrollBar: false

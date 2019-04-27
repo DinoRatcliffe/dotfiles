@@ -5,7 +5,8 @@
 # set mod to alt key
 set $mod Mod1
 
-font pango:Source Code Pro Light 15px
+# font pango:Source Code Pro Light 8px
+font xos4 Terminus:style=Bold:size=8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

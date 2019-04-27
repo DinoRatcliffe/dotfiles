@@ -17,4 +17,4 @@ done
 
 rm -rf outfile
 ~/.scripts/timer.sh -h $hour -m $min -s $sec -n "$name" | ~/.scripts/save-last-line.sh $outfile
-echo "Task Timer: %{F#f00}None%{F-}" > $outfile
+echo "" > $outfile
