@@ -22,9 +22,19 @@ filetype plugin indent on    " required
 " editor settings
 syntax on
 
+" code folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+
+
 execute "set colorcolumn=" . join(range(91,335), ',')
 
 colorscheme default
+highlight Folded ctermfg=Red
+highlight Folded ctermbg=Black
 set number relativenumber
 highlight LineNr ctermfg=240
 highlight CursorLineNr ctermfg=red
@@ -152,3 +162,4 @@ let g:netrw_banner=0
 let g:netrw_altv=1 " open splits to the right
 
 nnoremap  <tab> :Explore<CR>
+
