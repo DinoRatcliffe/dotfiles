@@ -11,8 +11,11 @@ font xos4 Terminus:style=Bold:size=8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# suspend shortcut
+bindsym $mod+s exec systemctl suspend
+
 # testing stuff
-for_window [title="^Environment$"] floating enable, sticky enable, border none, move absolute position 2315px 1180px
+for_window [title="^Environment$"] floating enable, sticky enable, border none, move absolute position 1120px 520px
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -22,7 +25,7 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -e sh -c "ssh k8s.dino.ai -p
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec i3-dmenu-desktop
 bindsym $mod+p exec passmenu 
 
 bindsym $mod+c exec /home/dino/.scripts/select-wifi.sh
@@ -70,7 +73,7 @@ bindsym $mod+n split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 

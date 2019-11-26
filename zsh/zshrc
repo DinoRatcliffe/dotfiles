@@ -25,6 +25,7 @@ alias tlc="todolist list completed "
 # Vim aliases
 alias v="vim"
 alias sv="sudo vim"
+alias vs="vim -S Session.vim"
 
 # Project aliases
 alias ck="cd ~/Development/kit"
@@ -32,6 +33,7 @@ alias ck="cd ~/Development/kit"
 # Python aliases
 alias p="python "
 alias pdb="python -m pdb "
+alias ip="screen ipython" # set as screen so works with vim cells plugin
 
 # Kubernetes aliases
 alias gk="cd /mnt/k8s-data" # this is fast nfs location for each k8s node
@@ -44,10 +46,10 @@ alias kd="kubectl delete"
 alias kdf="kubectl delete -f"
 
 alias kl="kubectl logs"
-alias kp="kubectl get pods -a -o wide | GREP_COLOR='01;33' egrep -i --color=always '^.*Running|$' | GREP_COLOR='01;32' egrep -i --color=always '^.*Completed|$' | GREP_COLOR='05;31' egrep -i --color=always '^.*Error|$' | GREP_COLOR='05;32' egrep -i --color=always '^.*ContainerCreating|$'"
+alias kp="kubectl get pods -o wide | GREP_COLOR='01;33' egrep -i --color=always '^.*Running|$' | GREP_COLOR='01;32' egrep -i --color=always '^.*Completed|$' | GREP_COLOR='05;31' egrep -i --color=always '^.*Error|$' | GREP_COLOR='05;32' egrep -i --color=always '^.*ContainerCreating|$'"
 
 # kp watch (hack to get it working with the watch command)
-alias kpw="\"kubectl get pods -a -o wide | GREP_COLOR='01;33' egrep -i --color=always '^.*Running|$' | GREP_COLOR='01;32' egrep -i --color=always '^.*Completed|$' | GREP_COLOR='05;31' egrep -i --color=always '^.*Error|$' | GREP_COLOR='05;32' egrep -i --color=always '^.*ContainerCreating|$'\""
+alias kpw="\"kubectl get pods -o wide | GREP_COLOR='01;33' egrep -i --color=always '^.*Running|$' | GREP_COLOR='01;32' egrep -i --color=always '^.*Completed|$' | GREP_COLOR='05;31' egrep -i --color=always '^.*Error|$' | GREP_COLOR='05;32' egrep -i --color=always '^.*ContainerCreating|$'\""
 alias kn="kubectl get nodes"
 
 # Jinja2 templates

@@ -11,7 +11,10 @@
 ## aliases, while the values are the commands they map to.
 ## Type: Dict
 # c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
-c.aliases = {'jse': 'set content.javascript.enabled true', 'jsd': 'set content.javascript.enabled false'}
+c.aliases = {'jse': 'set content.javascript.enabled true', 
+        'jsd': 'set content.javascript.enabled false',
+        'zotero': 'spawn --userscript zotero',
+        'Zotero': 'hint links userscript zotero'}
 
 ## Time interval (in milliseconds) between auto-saves of
 ## config/cookies/etc.
@@ -1549,6 +1552,11 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}',
 # config.bind('}}', 'navigate next -t')
 config.bind('m', 'spawn mpv {url}')
 config.bind('M', 'hint links spawn mpv {hint-url}')
+
+config.bind('z', 'zotero')
+config.bind('Z', 'Zotero')
+
+config.bind('P', 'hint links spawn wget-pdf {hint-url}')
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')

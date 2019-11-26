@@ -9,15 +9,42 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" The one true Pope
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-unimpaired'
+
 " Plugins
 Plugin 'bling/vim-bufferline'
-Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
+
+" python stuff
+Plugin 'jpalardy/vim-slime'
+Plugin 'hanschen/vim-ipython-cell'
+Plugin 'davidhalter/jedi-vim'
+
+" turn off docstring
+autocmd FileType python setlocal completeopt-=preview
+let g:jedi#popup_on_dot = 0
+
+let g:SuperTabCrMapping = 0
+let g:SuperTabDefaultCompletionType = 'context'
+autocmd FileType *
+      \ if &omnifunc != '' |
+      \     call SuperTabChain(&omnifunc, '<c-p>') |
+      \ endif
+
+" show marks next to line number
+Plugin 'kshenoy/vim-signature'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set viminfo='1000,f1
 
 " editor settings
 syntax on
@@ -28,9 +55,7 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-
-
-execute "set colorcolumn=" . join(range(91,335), ',')
+execute "set colorcolumn=" . join(range(80,335), ',')
 
 colorscheme default
 highlight Folded ctermfg=Red
@@ -40,6 +65,7 @@ highlight LineNr ctermfg=240
 highlight CursorLineNr ctermfg=red
 highlight Comment ctermfg=red
 highlight ColorColumn ctermbg=0
+highlight SignColumn ctermbg=none
 
 
 augroup numbertoggle
@@ -62,15 +88,44 @@ set path+=**
 set wildignore+=*.pyc
 set wildmenu
 
+" Chorded shortcut remaps
+inoremap ;xf <C-x><C-f>
+
+
+"""""""""
+" LATEX "
+"""""""""
+" lists
+autocmd FileType tex inoremap ;ul <Esc>o\begin{itemize}<CR>\end{itemize}<ESC>kA
+autocmd FileType tex inoremap ;ol <Esc>o\begin{enumerate}<CR>\end{enumerate}<ESC>kA
+autocmd FileType tex inoremap ;li <Esc>o\item<Space>
+
+" Figures
+autocmd FileType tex inoremap ;f <Esc>o\begin{figure*}[htbp]<CR>\centering<CR>\caption{<TODO>}<CR>\label{fig:<TODO>}<CR>\end{figure*}<Esc>3k$a
+autocmd FileType tex inoremap ;si <Esc>o\includegraphics[width=\textwidth]{Figures/}<Esc>i<C-x><C-f>
+autocmd FileType tex inoremap ;mi <Esc>o\subfloat[ \label{fig:<TODO>}]{<CR>\includegraphics[width=<TODO>\textwidth]{Figures/<TODO>}} \hfill<ESC>k0f[a
+
+" Tikx
+autocmd FileType tex inoremap ;tix <Esc>o\begin{tikzpicture}[node distance=2cm]<CR>\end{tikzpicture}<ESC>kA
+autocmd FileType tex inoremap ;txd <Esc>o\draw [] (<TODO>) -- (<TODO>);<ESC>0f[a
+autocmd FileType tex inoremap ;txn <Esc>o\node() [<TODO>] {<TODO>};<ESC>0f(a
+
+" Equations
+autocmd FileType tex inoremap ;eq <Esc>o\begin{equation}<CR>\label{eq:<TODO>}<CR>\end{equation}<ESC>2ko
+
+" draft
+autocmd FileType tex inoremap ;ds <Esc>o\draft{<CR><CR>}<ESC>kI
+
+
 " code 
 
 map <F6> :setlocal spell! spelllang=en_gb<CR>
 
-inoremap <Space><Space> <Esc>/<TODO><CR>"_c6l
+inoremap <Leader><Leader> <Esc>/<TODO><CR>:nohl<CR>"_c6l
 inoremap ;td TODO (dr@dino.ai): 
 
 " html
-autocmd FileType html inoremap ;i i<em></em><Space><TODO><ESC>FeT>i
+autocmd FileType html inoremap ;i <em></em><Space><TODO><ESC>FeT>i
 
 " python
 autocmd FileType python inoremap ;c class (<TODO>):<CR>"""<CR><TODO><CR>"""<CR>def __init__(self<TODO>):<CR><TODO><Esc>5k0f(i
@@ -87,6 +142,29 @@ autocmd FileType python inoremap ;am @abstractmethod<CR>def (self<TODO>):<CR>"""
 autocmd FileType python inoremap ;i if :<CR><TODO><Esc>k0f:i
 autocmd FileType python inoremap ;ie if :<CR><TODO><CR><C-d>else:<CR><TODO><Esc>3k0f:i
 autocmd FileType python inoremap ;iei if :<CR><TODO><Enter><C-d>elif <TODO>:<Enter><TODO><Esc>3k0f:i
+
+" iPython cells
+autocmd FileType python nnoremap <buffer> <Leader>E :IPythonCellRun<CR>
+autocmd FileType python nnoremap <buffer> <Leader>c :IPythonCellExecuteCell<CR>
+autocmd FileType python nnoremap <buffer> <Leader>C :IPythonCellExecuteCellJump<CR>
+autocmd FileType python nnoremap <buffer> <Leader>x :IPythonCellClear<CR>
+autocmd FileType python nnoremap <buffer> [c :IPythonCellPrevCell<CR>
+autocmd FileType python nnoremap <buffer> ]c :IPythonCellNextCell<CR>
+
+" python lint
+autocmd FileType python compiler pylint
+autocmd FileType python nnoremap <buffer> <Leader>l :Make %<CR>
+
+" python evaluate code
+autocmd FileType python nnoremap <leader>rc :1,.w !python3<CR>
+autocmd FileType python nnoremap <leader>e :1,.w !python3 -m code <Bar>& grep ">>> \S" <Bar> sed 's/.*>>> //' <Bar> tail -n 1 <CR>
+autocmd FileType python nnoremap <leader>E :1,.w !python3 -m code <Bar>& grep ">>> \S" <Bar> sed 's/.*>>> //' <CR>
+
+" run tests
+autocmd FileType python nnoremap <leader>rt :w !pytest %<CR>
+
+" type check
+autocmd filetype python nnoremap <leader>tc :w !mypy % --ignore-missing-imports<CR>
 
 " python - argparse
 autocmd FileType python inoremap ;api from argparse import ArgumentParser
@@ -157,9 +235,26 @@ autocmd VimEnter *
 nnoremap  <leader>bl :buffers<CR>:buffer<Space>
 nnoremap  <leader>q :bd<CR>
 
+nnoremap <leader>com :call WriteCompileToggle()<cr>
+
+let g:write_compile = 0
+function! WriteCompileToggle()
+    if g:write_compile
+        autocmd! BufWritePost
+        let g:write_compile = 0
+    else
+        " Specific thesis command
+        autocmd BufWritePost thesis.tex ! pdflatex <afile> && makeglossaries thesis && makeindex thesis && bibtex thesis && pdflatex <afile>
+        let g:write_compile = 1
+    endif
+endfunction
+
+
 let g:netrw_liststyle = 3
 let g:netrw_banner=0
 let g:netrw_altv=1 " open splits to the right
 
 nnoremap  <tab> :Explore<CR>
 
+" TODO (dr@dino.ai): There has to be a better way!
+:rv
