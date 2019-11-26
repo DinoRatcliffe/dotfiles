@@ -33,7 +33,6 @@ alias ck="cd ~/Development/kit"
 # Python aliases
 alias p="python "
 alias pdb="python -m pdb "
-alias ip="screen ipython" # set as screen so works with vim cells plugin
 
 # Kubernetes aliases
 alias gk="cd /mnt/k8s-data" # this is fast nfs location for each k8s node
