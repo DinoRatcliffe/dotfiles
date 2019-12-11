@@ -1,4 +1,5 @@
 xrdb $HOME/.Xresources
+sxhkd &
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exec i3

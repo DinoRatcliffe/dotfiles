@@ -1,0 +1,17 @@
+alt + space
+    qutebrowser
+
+alt + Return
+    urxvt
+
+alt + shift + Return
+    urxvt -e sh -c "ssh k8s.dino.ai -p 31415"
+
+alt + d 
+    dmenu_run
+
+alt + c 
+    ~/.scripts/select-wifi.sh
+
+alt + s
+    systemctl suspend
