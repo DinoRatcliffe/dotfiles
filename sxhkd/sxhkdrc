@@ -7,7 +7,7 @@ alt + Return
 alt + shift + Return
     urxvt -e sh -c "ssh k8s.dino.ai -p 31415"
 
-alt + d 
+alt + p 
     dmenu_run
 
 alt + c 
@@ -15,3 +15,16 @@ alt + c
 
 alt + s
     systemctl suspend
+
+alt + period
+    ~/.scripts/select-dotfile.sh
+
+XF86MonBrightness{Up,Down}
+    ~/.scripts/increment-backlight.sh {10, -10}
+
+XF86Audio{Raise,Lower}Volume
+    amixer sset 'Master' {5%+, 5%-}
+
+XF86AudioMute
+    amixer sset 'Master' toggle
+

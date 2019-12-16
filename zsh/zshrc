@@ -5,6 +5,9 @@ bindkey -v
 export EDITOR=vim
 export PATH=$PATH:~/.scripts
 
+# Suckless alias
+alias smi="sudo make install"
+
 # misc aliases
 alias title="printf '\033];%s\07\n' "
 
